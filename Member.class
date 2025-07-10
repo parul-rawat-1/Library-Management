@@ -1,0 +1,29 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+class Member {
+   String name;
+   Book issuedBook = null;
+
+   Member(String var1) {
+      this.name = var1;
+   }
+
+   void issueBook(Book var1) {
+      if (!var1.isIssued && this.issuedBook == null) {
+         var1.isIssued = true;
+         this.issuedBook = var1;
+         System.out.println(this.name + " issued Book " + var1.number);
+      } else {
+         System.out.println("Cannot issue Book " + var1.number + " to " + this.name);
+      }
+
+   }
+
+   void returnBook() {
+      if (this.issuedBook != null) {
+         this.issuedBook.isIssued = false;
+         System.out.println(this.name + " returned Book " + this.issuedBook.number);
+         this.issuedBook = null;
+      }
+
+   }
+}
