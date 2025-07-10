@@ -1,0 +1,18 @@
+public class Library 
+{
+   public Library() {
+   }
+
+   public static void main(String[] var0) {
+      Book var1 = new Book(1);
+      Book var2 = new Book(2);
+      Member var3 = new Member("Ravi");
+      Member var4 = new Member("Neha");
+      var3.issueBook(var1);
+      var4.issueBook(var1);
+      var3.returnBook();
+      var4.issueBook(var1);
+      System.out.println(var1);
+      System.out.println(var2);
+   }
+}
